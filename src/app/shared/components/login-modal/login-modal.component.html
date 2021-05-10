@@ -1,0 +1,25 @@
+<div *ngIf="_LoginModalService.isVisible" class="backdrop">
+  <div class="card">
+    <header class="header">
+      <h2>Welcome, please log in</h2>
+    </header>
+    <div class="content" [formGroup]="loginForm">
+      <div>
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" />
+        <span *ngIf="email && email?.invalid && (email?.dirty || email?.touched)
+          " id="fullName-help" class="p-invalid">Email is required.</span>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" />
+        <span *ngIf="password && password?.invalid && (password?.dirty || password?.touched)
+    " id="fullName-help" class="p-invalid">Password is required.</span>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="login__btn-cancel" type="submit" (click)="_LoginModalService.isVisible = false">CANCEL</button>
+      <button class="login__btn-login" type="submit" (click)="login()">LOGIN</button>
+    </div>
+  </div>
+</div>

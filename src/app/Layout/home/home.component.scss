@@ -1,0 +1,100 @@
+@import '/src/scss/variables';
+
+.home-container {
+  .squares-container {
+    padding: 0;
+
+    .square-1 {
+      min-height: 250px;
+      background-color: $covestro-green;
+      padding: 20px;
+
+      .headline2 {
+        font-size: 2rem;
+        line-height: 2.8125rem;
+        color: #fff;
+        font-weight: 300;
+      }
+
+      .text-inner {
+        font-size: 18px;
+        line-height: 1.5;
+        font-weight: 300;
+      }
+    }
+
+    .square-2 {
+      min-height: 250px;
+      background-color: $covestro-purple;
+      padding: 20px;
+    }
+
+    .square-3 {
+      min-height: 250px;
+      background-color: $covestro-blue;
+      padding: 20px;
+    }
+
+    .square-4 {
+      min-height: 250px;
+      background-color: $covestro-pink;
+      padding: 20px;
+    }
+  }
+}
+
+.row {
+  margin: 0;
+}
+
+.headline {
+  font-weight: 400;
+  font-size: 2.875rem;
+  margin-bottom: 21px;
+  color: white;
+  text-align: center;
+}
+
+.link-container {
+  cursor: pointer;
+  text-align: center
+}
+
+.small-text {
+  color: #fff;
+  font-weight: 400;
+  line-height: 2.375rem;
+  text-align: center;
+}
+
+button {
+  width: 150px;
+  height: 47px;
+  border-radius: 15px;
+  background-color: #fff;
+}
+
+.btn__login {
+  border: 2px solid $covestro-blue;
+  color: $covestro-blue;
+  font-weight: bolder;
+
+  &:hover {
+    background-color: $covestro-blue;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+}
+
+.btn__view-more {
+  border: 2px solid $covestro-pink;
+  color: $covestro-pink;
+  font-weight: bolder;
+
+  &:hover {
+    background-color: $covestro-pink;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+
+}

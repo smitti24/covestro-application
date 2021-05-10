@@ -1,0 +1,181 @@
+@import '../../../../scss/variables';
+
+header {
+  transition: transform 300ms ease, top .5s;
+  position: relative;
+  top: 0;
+  max-width: 1920px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 10000;
+  padding-top: 20px;
+
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .account-label-name {
+    display: inline-block;
+    margin-left: 10px;
+    color: #fff;
+  }
+
+  .nav-links {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    cursor: pointer;
+
+    h3:first-child:hover {
+      color: $covestro-pink;
+    }
+
+    h3:last-child:hover {
+      color: $covestro-blue;
+    }
+  }
+
+  .link,
+  a {
+    font-size: 1.125rem;
+  }
+
+  .account-badge {
+    padding: 25px;
+    padding-right: 0px;
+
+    .account-label {
+      color: white;
+      font-size: 16px;
+      display: none;
+      font-weight: bold;
+    }
+
+    &:hover {
+      color: white;
+      cursor: pointer;
+
+      .account-label {
+
+        display: block;
+      }
+    }
+  }
+
+  .fas {
+    font-size: 40px;
+  }
+
+  .hidden-lg-up {
+    display: none;
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  .logo .navigation {
+    display: flex;
+  }
+
+  .logo__link {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    line-height: 16px;
+    margin-left: 16px;
+
+    a {
+      overflow: visible;
+      white-space: nowrap;
+      color: #fff;
+      font-weight: 700;
+      font-size: 14px;
+    }
+  }
+
+}
+
+.user-email {
+  color: white;
+}
+
+@media (max-width: 530px) {
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: flex-end !important;
+    width: auto !important;
+    justify-content: start !important;
+    margin-top: 10px;
+
+    h3:first-child {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .account-label-name {
+    font-size: 18px;
+  }
+
+  img {
+    height: 80px;
+    width: 80px;
+  }
+
+  .user-email {
+    font-size: medium;
+  }
+}
+
+@media (min-width: 900px) {
+  img {
+    height: 96px;
+    width: 96px;
+  }
+
+  .header-content {
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 24px;
+      margin-left: 0;
+      position: absolute;
+      left: 0;
+    }
+
+    .logo__link {
+      a {
+        font-size: calc(3.65px + 1vw);
+        line-height: 24px;
+        margin-left: 32px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header-content {
+    height: 160px;
+
+    img {
+      height: 96px;
+      width: 96px;
+    }
+
+    .logo {
+      top: 25px;
+    }
+  }
+
+}

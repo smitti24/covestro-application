@@ -1,0 +1,26 @@
+@import '/src/scss/variables';
+
+.footer {
+  position: relative;
+  background-color: $base-color-light;
+
+}
+
+footer .footer__headline {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+@media (max-width: 650px) {
+  footer .footer {
+    padding: 10px;
+  }
+}
+
+@media (min-width: 650px) {
+  footer .footer {
+    padding: 30px 30px;
+  }
+}

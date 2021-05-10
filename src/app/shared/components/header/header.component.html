@@ -1,0 +1,33 @@
+<header>
+  <div class="header-content content">
+    <div>
+      <a routerLink="/home">
+        <img src="https://www.covestro.com/-/media/covestro/shared-library/logo/covestro-logo.png?la=en"
+          alt="To the Covestro Portal" title="To the Covestro Portal">
+      </a>
+      <h5 class="account-label-name" *ngIf="isAuthenticated">{{userProfile.name}}</h5>
+      <div class="nav-links">
+        <h3 id="route-link__home" routerLink="/home" class="user-email">Home</h3>
+        <h3 id="route-link__products" *ngIf="isAuthenticated" routerLink="/products" class="user-email">Products</h3>
+      </div>
+    </div>
+
+    <div class="account-badge btn_login" (click)="showLoginModal()" *ngIf="!isAuthenticated">
+      <a>
+        <i class="fas fa-sign-in-alt"></i>
+        <span class="account-label">Login</span>
+      </a>
+    </div>
+
+    <div class="account-badge btn_logout" (click)="logout()" *ngIf="isAuthenticated">
+      <div>
+        <a>
+          <i class="fas fa-sign-out-alt"></i>
+          <span class="account-label">Logout</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</header>

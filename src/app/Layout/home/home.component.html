@@ -1,0 +1,47 @@
+<div class="home-container">
+  <div class="squares-container">
+    <div class="row" *ngIf="!isUserLoggedIn">
+      <div class="col-12 col-sm-12 col-md-12 square-1">
+        <div class="headline">
+          Welcome to Covestro,
+        </div>
+        <div class="small-text">Please log in to view all your available products.</div>
+        <div class="link-container"><button class="btn__login" (click)="login()">Login</button></div>
+      </div>
+    </div>
+    <div class="row" *ngIf="isUserLoggedIn">
+      <div class="col-12 col-sm-12 col-md-6 square-1">
+        <div class="row">
+          <div class="col-xs-12 col-lg-3 headline2">
+            Covestro – leading in polymer materials
+          </div>
+          <div class="col-xs-12 col-lg-9 ">
+            <div class="text--medium text-inner">
+              <p>Covestro creates materials the world relies on every day. Our high-tech polymers are used in nearly
+                every area of modern life and in a wide range of industries: Automotive, construction, healthcare,
+                cosmetics, energy, electronics, sports and leisure.</p>
+
+              <p>But we don't just produce materials. Together with our partners and customers, we're taking big steps
+                to tackle a fundamental challenge: Shifting towards a Circular Economy. To achieve this bold goal, we're
+                innovating efficient ways to close energy and material cycles, pushing the boundaries of what is
+                possible with polymers.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-6 square-2">
+        <div class="headline">
+          Products
+        </div>
+        <div class="small-text">Browse products via application, material, region and more with our intelligent product
+          finder.</div>
+        <div class="link-container"><button class="btn__view-more" (click)="viewMore()">View</button></div>
+      </div>
+    </div>
+    <div class="row" *ngIf="isUserLoggedIn">
+      <div class="col-12 col-sm-12 col-md-6 square-3"></div>
+      <div class="col-12 col-sm-12 col-md-6 square-4"></div>
+    </div>
+  </div>
+</div>
